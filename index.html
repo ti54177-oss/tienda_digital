@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tienda de ropa básica: prendas esenciales para hombre, mujer y niño.">
+  <title>ESENCIA — Ropa básica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="top-strip">ROPA BÁSICA PARA TODOS LOS DÍAS · ¡GRACIAS POR VISITAR LA TIENDA!</div>
+  <header class="site-header">
+    <a class="logo" href="#inicio" aria-label="Esencia, inicio">esencia<span>.</span></a>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="#hombre">Hombre</a>
+      <a href="#mujer">Mujer</a>
+      <a href="#ninos">Niños</a>
+      <a href="#coleccion">Colección</a>
+    </nav>
+    <div class="header-actions">
+      <label class="search-wrap"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Buscar prenda..." aria-label="Buscar prenda"></label>
+      <button class="cart-button" id="cartButton" aria-label="Ver carrito">Bolsa <span id="cartCount">0</span></button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">BIENVENIDO A ESENCIA</p>
+        <h1>Ropa que te gusta,<br>para usar <em>siempre.</em></h1>
+        <p class="hero-text">Aquí puedes encontrar playeras, sudaderas y pantalones para hombre, mujer y niños.</p>
+        <a class="primary-link" href="#coleccion">Ver ropa <span>↗</span></a>
+      </div>
+      <div class="hero-art" aria-label="Ilustración de prendas básicas">
+        <div class="art-note">EVERYDAY<br>ESSENTIALS</div>
+        <svg class="hero-shirt" viewBox="0 0 300 300" role="img" aria-label="Playera básica color crema">
+          <path d="M94 45 125 31Q150 52 175 31L206 45 260 91 229 130 205 111 205 267 95 267 95 111 71 130 40 91Z" fill="#d8c9ae"/>
+          <path d="M125 31Q150 75 175 31" fill="none" stroke="#b8a88e" stroke-width="5"/>
+          <path d="M95 111 95 267M205 111 205 267" stroke="#c3b293" stroke-width="2" opacity=".65"/>
+        </svg>
+        <svg class="hero-pants" viewBox="0 0 220 300" role="img" aria-label="Pantalón básico oscuro">
+          <path d="M45 25H175L184 270 119 270 108 132 96 270 31 270Z" fill="#39413d"/>
+          <path d="M45 25H175L171 62H49Z" fill="#303834"/>
+          <path d="M108 62V132" stroke="#59615b" stroke-width="2"/>
+        </svg>
+        <span class="hero-caption">BÁSICOS / 2026</span>
+      </div>
+    </section>
+
+    <section class="category-section" id="coleccion">
+      <div class="section-heading">
+        <div><p class="eyebrow">ENCUENTRA TU ESTILO</p><h2>Compra por sección</h2></div>
+        <p>Escoge la sección que quieras ver.</p>
+      </div>
+      <div class="category-grid">
+        <a class="category-tile tile-men" href="#hombre"><span>01 / COLECCIÓN</span><strong>Hombre</strong><b>Ver prendas ↗</b></a>
+        <a class="category-tile tile-women" href="#mujer"><span>02 / COLECCIÓN</span><strong>Mujer</strong><b>Ver prendas ↗</b></a>
+        <a class="category-tile tile-kids" href="#ninos"><span>03 / COLECCIÓN</span><strong>Niños</strong><b>Ver prendas ↗</b></a>
+      </div>
+    </section>
+
+    <section class="products-section" id="hombre">
+      <div class="section-heading product-heading">
+        <div><p class="eyebrow">01 — PARA ÉL</p><h2>Hombre</h2></div>
+        <a href="#hombre" class="text-link" data-show-all="hombre">Ver todo <span>↗</span></a>
+      </div>
+      <div class="filter-row" data-filter-group="hombre">
+        <button class="filter-chip active" data-filter="todos">Todo</button><button class="filter-chip" data-filter="playeras">Playeras</button><button class="filter-chip" data-filter="sudaderas">Sudaderas</button><button class="filter-chip" data-filter="pantalones">Pantalones</button>
+      </div>
+      <div class="product-grid" id="grid-hombre"></div>
+    </section>
+
+    <section class="products-section alt-section" id="mujer">
+      <div class="section-heading product-heading">
+        <div><p class="eyebrow">02 — PARA ELLA</p><h2>Mujer</h2></div>
+        <a href="#mujer" class="text-link" data-show-all="mujer">Ver todo <span>↗</span></a>
+      </div>
+      <div class="filter-row" data-filter-group="mujer">
+        <button class="filter-chip active" data-filter="todos">Todo</button><button class="filter-chip" data-filter="playeras">Playeras</button><button class="filter-chip" data-filter="tops">Tops</button><button class="filter-chip" data-filter="pantalones">Pantalones</button>
+      </div>
+      <div class="product-grid" id="grid-mujer"></div>
+    </section>
+
+    <section class="products-section" id="ninos">
+      <div class="section-heading product-heading">
+        <div><p class="eyebrow">03 — PARA LOS MÁS PEQUEÑOS</p><h2>Niños</h2></div>
+        <a href="#ninos" class="text-link" data-show-all="ninos">Ver todo <span>↗</span></a>
+      </div>
+      <div class="filter-row" data-filter-group="ninos">
+        <button class="filter-chip active" data-filter="todos">Todo</button><button class="filter-chip" data-filter="playeras">Playeras</button><button class="filter-chip" data-filter="sudaderas">Sudaderas</button><button class="filter-chip" data-filter="pantalones">Pantalones</button>
+      </div>
+      <div class="product-grid" id="grid-ninos"></div>
+    </section>
+
+    <section class="values-band">
+      <div><span>01</span><strong>Comodidad diaria</strong><p>Prendas pensadas para acompañarte.</p></div>
+      <div><span>02</span><strong>Fácil de combinar</strong><p>Colores neutros y diseños atemporales.</p></div>
+      <div><span>03</span><strong>Lo que necesitas</strong><p>Un guardarropa simple y funcional.</p></div>
+    </section>
+    <section class="newsletter">
+      <p class="eyebrow">FORMA PARTE DE ESENCIA</p><h2>¡Entérate cuando agreguemos ropa nueva!</h2>
+      <form id="newsletterForm"><input type="email" placeholder="Tu correo electrónico" required aria-label="Tu correo electrónico"><button type="submit">Suscribirme ↗</button></form>
+      <p id="newsletterMessage" class="form-message" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="logo" href="#inicio">esencia<span>.</span></a>
+    <p>Ropa básica para todos los días.</p>
+    <div><a href="#hombre">Hombre</a><a href="#mujer">Mujer</a><a href="#ninos">Niños</a></div>
+    <small>© 2026 ESENCIA. Proyecto de tienda demostrativa.</small>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
